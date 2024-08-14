@@ -55,17 +55,17 @@ async function getTransactionByHash(txHash) {
     console.error("Error fetching block data:", error);
   }
 }
-async function processTransactions(txs) {
-  // for (const tx of txs) {
-  //   const transaction = await provider.getTransactionByHash(tx);
-  //   console.log(transaction);
-  // }
-  for (let i = 0; i < Math.min(txs.length, 10); i++) {
-    const tx = txs[i];
-    const transaction = await getTransactionByHash(tx);
-    console.log(transaction);
-  }
-}
+// async function processTransactions(txs) {
+//   // for (const tx of txs) {
+//   //   const transaction = await provider.getTransactionByHash(tx);
+//   //   console.log(transaction);
+//   // }
+//   for (let i = 0; i < Math.min(txs.length, 10); i++) {
+//     const tx = txs[i];
+//     const transaction = await getTransactionByHash(tx);
+//     console.log(transaction);
+//   }
+// }
 
 async function getTxDetails(txHash) {
   return await provider.getTransactionByHash(txHash);
