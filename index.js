@@ -137,8 +137,14 @@ async function main() {
   console.log(`Sending RPC call at: ${new Date(startTime).toISOString()}`);
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
 
-  const startBlockNumber = 668345; // starting 668345
-  const numBlocks = 1; // 345 blocks
+  const latestBlockNumber = await provider.getBlockNumber("latest");
+  const startBlockNumber = parseInt(process.argv[2], 10) || latestBlockNumber; // starting block number from command line or default
+  const numBlocks = parseInt(process.argv[3], 10) || 1; // number of blocks from command line or default
+  console.log(
+    `Processing blocks from ${startBlockNumber} to ${
+      startBlockNumber + numBlocks - 1
+    }`
+  );
   await processBlocks(startBlockNumber, numBlocks);
 
   if (errors.length > 0) {
@@ -165,10 +171,6 @@ async function main() {
   console.log(`RPC call duration: ${endTime - startTime} ms`);
   console.log(`Request count: ${requestCount}`);
   await createLogs(startTime, endTime, requestCount);
-
-  // 33421ms Alchemy - 271 calls
-  // 13711ms Voyager - 271 calls
-  // 29214ms Infura - 271 calls
 }
 
 main();
