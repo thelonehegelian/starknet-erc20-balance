@@ -120,7 +120,7 @@ async function processBlocks(startBlockNumber, numBlocks) {
 
 async function createLogs(startTime, endTime, requestCount) {
   const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const logFilename = `log_${timestamp}.txt`;
+  const logFilename = `log_${timestamp}.log`;
   const logContent = `
 Started at: ${new Date(startTime).toISOString()}
 Received response at: ${new Date(endTime).toISOString()}
