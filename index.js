@@ -6,8 +6,8 @@ const { createRequestBody, fetchData } = require("./utils/rpc");
 const { createHeaders } = require("./utils/rpc");
 // const { getBlock, getBlockInfo } = require("./utils/fetch");
 const fs = require("fs");
-const NODE_URL = process.env.VOYAGER_NODE_URL;
-const API_KEY = process.env.VOYAGER_API_KEY;
+const NODE_URL = process.env.NODE_URL;
+const API_KEY = process.env.API_KEY;
 
 /**
  * @typedef {Object} BlockData
