@@ -73,7 +73,7 @@ The results of the script run are saved in the data folder.
 
 ## Algorithm
 
-The algorithm is a bit dumb. It goes throught the blocks, then transactions, gets the sender_address and uses that to get the balance sender balance of ERC20 tokens. 
+The algorithm is a bit dumb. It goes through the blocks, then transactions, gets the sender_address and uses that to get the ERC20 tokens balance of the sender. 
 A better way would be to use Event logs on the ERC20 tokens.
 
 ## Utilities
