@@ -56,7 +56,7 @@ module.exports = {
     { name: "Token1", address: "0xToken1Address" },
     { name: "Token2", address: "0xToken2Address" }
   ],
-  NETWORK: "mainnet"
+  NETWORK: "starknet-mainnet"
 };
 
 ```
