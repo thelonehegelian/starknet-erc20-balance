@@ -69,6 +69,8 @@ To run the script, use the following command:
 npm start <startingBlock> <numberOfBlocksToProcess>
 ```
 
+The results of the script run are saved in the data folder.
+
 ## Algorithm
 
 The algorithm is a bit dumb. It goes throught the blocks, then transactions, gets the sender_address and uses that to get the balance sender balance of ERC20 tokens. 
