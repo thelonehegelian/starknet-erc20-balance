@@ -1,4 +1,4 @@
-# StarkNet Transaction Processor
+# StarkNet ERC20 Balance
 
 This repository processes Ethereum transactions using StarkNet's tools and writes the extracted data to an Excel file. It provides a set of tools and utilities to interact with a StarkNet provider, fetch transaction details, and extract ERC20 token balances.
 
@@ -68,6 +68,11 @@ To run the script, use the following command:
 ```bash
 npm start <startingBlock> <numberOfBlocksToProcess>
 ```
+
+## Algorithm
+
+The algorithm is a bit dumb. It goes throught the blocks, then transactions, gets the sender_address and uses that to get the balance sender balance of ERC20 tokens. 
+A better way would be to use Event logs on the ERC20 tokens.
 
 ## Utilities
 
