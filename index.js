@@ -93,6 +93,7 @@ async function collectErc20Balances(contract, tokenName, address) {
 }
 
 async function processBlocks(startBlockNumber, numBlocks) {
+  // We just need the ERC20 contract ABI and ETH is an ERC20 token on Starknet
   const { abi } = await provider.getClassAt(ADDRESSES[0].address);
 
   for (
